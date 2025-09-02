@@ -3,7 +3,7 @@
   "displayName": "pomodoro-extension",
   "publisher": "nishchitmalasana",
   "description": "short sweet pomodoro timer for vs code",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "icon": "images/icon.png",
   "engines": {
     "vscode": "^1.103.0"
@@ -13,7 +13,11 @@
     "url": "https://github.com/Nishchit-Dev/Productivity-Extension.git"
   },
   "categories": [
-    "Productivity"
+    "Programming Languages",
+    "Chat",
+    "Education",
+    "Other",
+    "AI"
   ],
   "main": "./out/extension.js",
   "activationEvents": [

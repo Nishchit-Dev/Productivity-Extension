@@ -7,9 +7,9 @@ A tiny, no-frills Pomodoro timer for VS Code. Shows a countdown in the status ba
 -   🍅 Status bar countdown (work/break/long break)
 -   🔔 Notifications on session end
 -   🎹 Shortcuts:
-    -   Start: **Ctrl+Alt+P** (macOS: Cmd+Alt+P)
-    -   Pause: **Ctrl+Alt+O** (macOS: Cmd+Alt+O)
-    -   Reset: **Ctrl+Alt+R** (macOS: Cmd+Alt+R)
+    -   Start: **Ctrl+Alt+P** (macOS: Cmd+Option+P)
+    -   Pause: **Ctrl+Alt+O** (macOS: Cmd+Option+O)
+    -   Reset: **Ctrl+Alt+R** (macOS: Cmd+Option+R)
 
 ## Commands
 
