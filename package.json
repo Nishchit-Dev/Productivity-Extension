@@ -1,7 +1,7 @@
 {
   "name": "pomodoro-extension",
   "displayName": "pomodoro-extension",
-  "publisher": "NishchitMalasana",
+  "publisher": "nishchitmalasana",
   "description": "short sweet pomodoro timer for vs code",
   "version": "0.0.1",
   "icon": "images/icon.png",
