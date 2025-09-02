@@ -1,0 +1,111 @@
+{
+  "name": "pomodoro-extension",
+  "displayName": "pomodoro-extension",
+  "publisher": "NishchitMalasana",
+  "description": "short sweet pomodoro timer for vs code",
+  "version": "0.0.1",
+  "icon": "images/icon.png",
+  "engines": {
+    "vscode": "^1.103.0"
+  },
+  "categories": [
+    "Productivity"
+  ],
+  "main": "./out/extension.js",
+  "activationEvents": [
+    "onCommand:pomodoro.start",
+    "onCommand:pomodoro.pause",
+    "onCommand:pomodoro.reset"
+  ],
+  "when": "editorTextFocus || terminalFocus",
+  "contributes": {
+    "commands": [
+      {
+        "command": "pomodoro.start",
+        "title": "Pomodoro: Start"
+      },
+      {
+        "command": "pomodoro.pause",
+        "title": "Pomodoro: Pause"
+      },
+      {
+        "command": "pomodoro.reset",
+        "title": "Pomodoro: Reset"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "pomodoro.start",
+        "key": "ctrl+alt+p",
+        "win": "ctrl+alt+p",
+        "linux": "ctrl+alt+p",
+        "mac": "cmd+alt+p"
+      },
+      {
+        "command": "pomodoro.pause",
+        "key": "ctrl+alt+o",
+        "win": "ctrl+alt+o",
+        "linux": "ctrl+alt+o",
+        "mac": "cmd+alt+o"
+      },
+      {
+        "command": "pomodoro.reset",
+        "key": "ctrl+alt+r",
+        "win": "ctrl+alt+r",
+        "linux": "ctrl+alt+r",
+        "mac": "cmd+alt+r"
+      }
+    ],
+    "configuration": {
+      "title": "Pomodoro",
+      "properties": {
+        "pomodoro.workMinutes": {
+          "type": "number",
+          "default": 25,
+          "minimum": 1,
+          "description": "Length of a work session (minutes)."
+        },
+        "pomodoro.breakMinutes": {
+          "type": "number",
+          "default": 5,
+          "minimum": 1,
+          "description": "Length of a short break (minutes)."
+        },
+        "pomodoro.longBreakMinutes": {
+          "type": "number",
+          "default": 15,
+          "minimum": 1,
+          "description": "Length of a long break (minutes)."
+        },
+        "pomodoro.sessionsBeforeLongBreak": {
+          "type": "number",
+          "default": 4,
+          "minimum": 1,
+          "description": "How many work sessions before a long break."
+        },
+        "pomodoro.showNotifications": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show notifications when sessions start/finish."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^20.19.11",
+    "@types/vscode": "^1.93.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "eslint": "^8.0.0",
+    "typescript": "^5.0.0"
+  }
+}
